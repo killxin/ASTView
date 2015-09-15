@@ -22,30 +22,10 @@ public class DemoVisitor extends ASTVisitor {
 		print(name[5]);
 		No++;
 	}
-	
+
 	@Override
 	public void postVisit(ASTNode node) {
 		No--;
 	}
 
-	/*
-	 * private int No;
-	 * 
-	 * public DemoVisitor() { No = 0; }
-	 * 
-	 * @Override public boolean visit(FieldDeclaration node) { for (Object obj :
-	 * node.fragments()) { VariableDeclarationFragment v =
-	 * (VariableDeclarationFragment) obj; System.out.println("No." + No +
-	 * " Field:\t" + v.getName()); No++; }
-	 * 
-	 * return true; }
-	 * 
-	 * @Override public boolean visit(MethodDeclaration node) {
-	 * System.out.println("No." + No + " Method:\t" + node.getName()); No++;
-	 * return true; }
-	 * 
-	 * @Override public boolean visit(TypeDeclaration node) {
-	 * System.out.println("No." + No + " Class:\t" + node.getName()); No++;
-	 * return true; }
-	 */
 }
